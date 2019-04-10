@@ -39,7 +39,7 @@ export default class TravelDestination extends Component {
                         <h2>WHERE YOU WANT TO GO</h2>
                         <br/>
                             <div className="row">
-                                <div className="col-md-12 ">
+                                <div className="col-md-12">
                                     <div className="card-deck">
                                         <div className="card">
                                             <img className="card-img-top" src={img2}
