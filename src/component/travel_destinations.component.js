@@ -7,6 +7,7 @@ import img3 from "../img/category_SeaSide.jpg";
 import img4 from "../img/category_wildLife.jpg";
 import WildLifeDestination from './destinations_wildLife.component';
 import AirTicketing from "./air_ticketing.component";
+import SandyBeaches from "./sandy_beaches.component";
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 
@@ -17,6 +18,11 @@ var sectionStyle = {
     backgroundRepeat: "none",
     backgroundPosition: "center",
 
+};
+
+var divOverlayStyle = {
+    zindex: "10",
+    backgroundColor: "rgba(0,0,0,0.5)"
 };
 
 var divOverlayStyle = {
@@ -41,7 +47,7 @@ export default class TravelDestination extends Component {
                 <div className="container-fluid" style={{width: 1000, height: 1000}}>
                     <div className="container">
                         <br/><br/>
-                        <h2>WHERE YOU WANT TO GO</h2>
+                        <h2 style={{color: "white"}}>WHERE YOU WANT TO GO</h2>
                         <br/>
                             <div className="row">
                                 <div className="col-md-12">
@@ -63,8 +69,8 @@ export default class TravelDestination extends Component {
                                                  alt="Card image cap"/>
                                                 <div className="card-body">
                                                     <h5 className="card-title">Sandy Beaches</h5>
-                                                    <button type="button" className="btn btn-sm  btn-primary">Choose
-                                                    </button>
+                                                        <Link to="/beaches" className="btn btn-primary">Choose</Link>
+
 
                                                 </div>
                                                 <div className="card-footer">

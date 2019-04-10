@@ -18,7 +18,6 @@ var sectionStyle = {
 };
 
 var divOverlayStyle = {
-
     position: "absolute",
     top: "0",
     left: "0",
@@ -26,8 +25,6 @@ var divOverlayStyle = {
     height: "100%",
     zindex: "10",
     backgroundColor: "rgba(0,0,0,0.5)"
-
-
 };
 
 
@@ -35,7 +32,7 @@ export default class WildLifeDestination extends Component {
     render() {
         return (
             <div style={sectionStyle}>
-                <div className="container-fluid" style={{width: 1000, height: 1000}}>
+                <div className="container-fluid" >
                     <div className="container">
                         <br/><br/>
                         <h2>National Parks</h2>

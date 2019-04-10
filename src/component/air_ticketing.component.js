@@ -5,7 +5,7 @@ import img1 from "../img/srilankanair.jpg";
 import img2 from "../img/malayasiaair.jpg";
 import img3 from "../img/quantas.jpg";
 import img4 from "../img/flydubai.jpg";
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -103,7 +103,13 @@ export default class AirTicketing extends Component {
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </div>
                                 </div>
+                                <div>
+
+                                </div>
                             </div>
+                            <br/><br/><br/>
+                            <Link to="/listHotel"  className="btn btn-sm btn-primary">Proceed</Link>
+
                         </div>
                     </div>
                 </div>

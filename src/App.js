@@ -6,9 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import WildLifeDestination from "./component/destinations_wildLife.component";
 import SelectCountry from "./component/select_country.component"
+import HotelList from "./component/hotel-list-component";
+import SandyBeaches from "./component/sandy_beaches.component";
 import logo from "./img/logoUn.png";
 
 
@@ -30,8 +31,7 @@ class App extends Component {
                                         </li>
 
                                         <li className="nav-item active">
-                                            <a className="nav-link" href="#">Hotel<span
-                                                className="sr-only">(current)</span></a>
+                                            <Link to="/listHotel" className="nav-link">Hotel</Link>
                                         </li>
 
                                         <li className="nav-item active">
@@ -61,6 +61,8 @@ class App extends Component {
                     <Route path="/destinations" component={TravelDestination}/>
                     <Route path="/wildlife" component={WildLifeDestination}/>
                     <Route path="/selectcountry" component={SelectCountry}/>
+                    <Route path="/listHotel" component={HotelList}/>
+                    <Route path="/beaches" component={SandyBeaches}/>
                 </div>
             </Router>
 

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from "../img/Sri-Lanka-4K.jpg";
-
+import { Link } from 'react-router-dom';
 
 var sectionStyle = {
     width: "100%",

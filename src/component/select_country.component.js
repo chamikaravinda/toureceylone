@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from "../img/Sri-Lanka-4K.jpg";
+import { Link } from 'react-router-dom';
 
 var sectionStyle = {
     width: "100%",
@@ -50,7 +51,7 @@ export default class SelectCountry extends Component {
 
                                     </div>
                                     <div className="col-auto my-1" style={{margin: 10}}>
-                                        <button type="submit" className="btn btn-primary">Go</button>
+                                        <Link to="/airticket"  className="btn btn-sm btn-primary">Go</Link>
                                     </div>
                                 </div>
 

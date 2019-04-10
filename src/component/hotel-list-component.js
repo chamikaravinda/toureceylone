@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from "../img/Sri-Lanka-4K.jpg";
@@ -17,6 +17,20 @@ var sectionStyle = {
     backgroundPosition: "center",
 
 };
+
+var imageStyle = {
+    width: "200",
+    height: "200px",
+}
+
+
+var divOverlayStyle = {
+    zindex: "10",
+    backgroundColor: "rgba(0,0,0,0.5)",
+    height: "800px",
+    textAlign: "center"
+};
+
 
 function calculateGalleFort() {
     var result = "Galle Fort"
@@ -56,12 +70,12 @@ export default class HotelList extends Component{
         return(
 
             <div style={sectionStyle}>
-                <div className="container-fluid" style={{width: 1000, height: 1000}}>
+                <div className="container-fluid" style={divOverlayStyle}>
                     <div className="container">
-                        <h1 className="display-1 align-content-center">Hotels</h1>
+                        <h1 style={{color: "white"}} className="display-1 align-content-center">Hotels</h1>
                     </div>
                     <div className="row">
-                        <div className="col-md-12 ">
+                        <div className="col-md-10 offset-md-1">
                             <div className="card-deck">
                                 <div className="card">
                                     <img className="card-img-top" src={hotel1_img}
@@ -113,19 +127,21 @@ export default class HotelList extends Component{
                     </div>
 
                     <br/>
-                    <h2 color = "white"> Submit Form </h2>
+                    <h2 style={{color: "white"}}> Submit Form </h2>
+
 
                     <form onSubmit={this.onSubmit}>
-                        <div className="form-group">
-                            <label color = "white">User ID : </label>
+                        <div className='row'>
+                        <div className="form-group col-md-5 offset-md-1">
+                            <label style={{color: "white"}}>User ID : </label>
                             <input type="text"
                                    className="form-control"
                                    value = "USER_34553"
                             />
                         </div>
 
-                        <div className="form-group">
-                            <label color = "white">Destination : </label>
+                        <div className="form-group col-md-5 ">
+                            <label style={{color: "white"}}>Destination : </label>
                             <input type="text"
                                    className="form-control"
                                    value = ""
@@ -134,8 +150,8 @@ export default class HotelList extends Component{
                         </div>
 
 
-                        <div className="form-group">
-                            <label color = "white">Number of Days : </label>
+                        <div className="form-group col-md-5 offset-md-1">
+                            <label style={{color: "white"}}>Number of Days : </label>
                             <input type="text"
                                    className="form-control"
                                    value = ""
@@ -143,11 +159,13 @@ export default class HotelList extends Component{
                             />
                         </div>
 
-                        <div className= "form-group">
-                             <button type="button"  className="btn btn-sm  btn-primary"> Proceed</button>
+                        <div>
+                            <br/>
+                                <Link to="/destinations" style={{width:610,marginTop:10}} className="btn btn-primary">Proceed</Link>
                         </div>
-
+                        </div>
                     </form>
+
                 </div>
 
 
