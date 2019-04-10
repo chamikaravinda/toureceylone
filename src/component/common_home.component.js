@@ -12,14 +12,11 @@ var sectionStyle = {
 
 };
 
+
 var divOverlayStyle = {
     zindex: "10",
     backgroundColor: "rgba(0,0,0,0.5)"
 };
-
-
-
-
 
 
 export default class  HomeComponent extends Component {

@@ -1,11 +1,15 @@
+
 import React, {Component} from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import WildLifeDestination from "./component/destinations_wildLife.component";
+import SelectCountry from "./component/select_country.component"
+import logo from "./img/logoUn.png";
 
 
 class App extends Component {
@@ -15,6 +19,9 @@ class App extends Component {
                 <div>
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <a className="navbar-brand" href="google.com" target="_blank">
+                                <img src={logo} width="82" height="64" alt="google.com"/>
+                            </a>
                             <div className="container">
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav mr-auto">
@@ -34,8 +41,11 @@ class App extends Component {
                                         <li className="nav-item active">
                                             <Link to="/destinations" className="nav-link">Destinations</Link>
                                         </li>
-                                    </ul>
 
+                                        <li className="nav-item active">
+                                            <Link to="/selectcountry" className="nav-link">Select Country</Link>
+                                        </li>
+                                    </ul>
                                     <form className="form-inline my-2 my-lg-0">
                                         <input className="form-control mr-sm-2" type="search" placeholder="Search"
                                                aria-label="Search"/>
@@ -50,6 +60,7 @@ class App extends Component {
                     <Route path="/airticket" component={AirTicketing}/>
                     <Route path="/destinations" component={TravelDestination}/>
                     <Route path="/wildlife" component={WildLifeDestination}/>
+                    <Route path="/selectcountry" component={SelectCountry}/>
                 </div>
             </Router>
 
