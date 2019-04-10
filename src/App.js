@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import SelectCountry from "./component/select_country.component"
+
 
 
 class App extends Component {
@@ -33,6 +35,10 @@ class App extends Component {
                                         <li className="nav-item active">
                                             <Link to="/destinations" className="nav-link">Destinations</Link>
                                         </li>
+
+                                        <li className="nav-item active">
+                                            <Link to="/selectcountry" className="nav-link">Select Country</Link>
+                                        </li>
                                     </ul>
 
                                     <form className="form-inline my-2 my-lg-0">
@@ -48,6 +54,7 @@ class App extends Component {
                     <Route path="/" exact component={HomeComponent}/>
                     <Route path="/airticket" component={AirTicketing}/>
                     <Route path="/destinations" component={TravelDestination}/>
+                    <Route path="/selectcountry" component={SelectCountry}/>
                 </div>
             </Router>
 
