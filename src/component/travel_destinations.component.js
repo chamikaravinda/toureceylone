@@ -26,7 +26,7 @@ var divOverlayStyle = {
 };
 
 
-export default class  TravelDestination extends Component {
+export default class TravelDestination extends Component {
     render() {
         return (
             <div style={sectionStyle}>
