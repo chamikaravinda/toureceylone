@@ -6,7 +6,7 @@ import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
 import SelectCountry from "./component/select_country.component"
-
+import logo from "./img/logoUn.png";
 
 
 class App extends Component {
@@ -16,6 +16,9 @@ class App extends Component {
                 <div>
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <a className="navbar-brand" href="google.com" target="_blank">
+                                <img src={logo} width="82" height="64" alt="google.com"/>
+                            </a>
                             <div className="container">
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav mr-auto">

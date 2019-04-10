@@ -7,6 +7,7 @@ import img3 from "../img/quantas.jpg";
 import img4 from "../img/flydubai.jpg";
 
 
+
 var sectionStyle = {
     width: "100%",
     height: "1000px",
@@ -21,8 +22,6 @@ var divOverlayStyle = {
     backgroundColor: "rgba(0,0,0,0.5)",
     height: "800px",
     textAlign: "center"
-
-
 };
 
 var imageStyle = {
@@ -38,7 +37,7 @@ export default class AirTicketing extends Component {
                 <br/><br/>
                 <div className="container-fluid" style={divOverlayStyle}>
                     <br/><br/>
-                    <h2 style={{color:"white"}}><b>Lets Fly Mate</b></h2>
+                    <h2 style={{color: "white"}}><b>Lets Fly Mate</b></h2>
                     <br/>
                     <div className="row">
                         <div className="col-md-10 offset-md-1">
@@ -48,8 +47,10 @@ export default class AirTicketing extends Component {
                                          alt="Card image cap" style={imageStyle}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Sri Lankan AirLines</h5>
-                                        <button type="button" className="btn  btn-sm  btn-primary">Choose
-                                        </button>
+                                        <a href="https://www.srilankan.com/en_uk/lk" target="_blank">
+                                            <button type="button" className="btn  btn-sm  btn-primary">Choose
+                                            </button>
+                                        </a>
                                     </div>
                                     <div className="card-footer">
                                         <small className="text-muted">Last updated 3 mins ago</small>
@@ -60,8 +61,10 @@ export default class AirTicketing extends Component {
                                          alt="Card image cap" style={imageStyle}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Malaysian Air</h5>
-                                        <button type="button" className="btn btn-sm  btn-primary">Choose
-                                        </button>
+                                        <a href="https://www.malaysiaairlines.com/hq/en.html" target="_blank">
+                                            <button type="button" className="btn btn-sm  btn-primary">Choose
+                                            </button>
+                                        </a>
 
                                     </div>
                                     <div className="card-footer">
@@ -73,8 +76,10 @@ export default class AirTicketing extends Component {
                                          alt="Card image cap" style={imageStyle}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Quantas</h5>
-                                        <button type="button" className="btn btn-sm  btn-primary">Choose
-                                        </button>
+                                        <a href="https://www.qantas.com/us/en.html" target="_blank">
+                                            <button type="button" className="btn btn-sm  btn-primary">Choose
+                                            </button>
+                                        </a>
 
                                     </div>
                                     <div className="card-footer">
@@ -86,9 +91,11 @@ export default class AirTicketing extends Component {
                                          alt="Card image cap" style={imageStyle}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Fly Dubai</h5>
-                                        <button type="button" className="btn btn-sm btn-primary">Choose
-                                        </button>
-
+                                        <a href="https://www.flydubai.com/en/?gclid=CjwKCAjwqLblBRBYEiwAV3pCJs14O7XhVQV9xwPsUeSHlINTKda7mSQPxMaJQVHEiBfqQM2iBaeWDxoCfpUQAvD_BwE"
+                                           target="_blank">
+                                            <button type="button" className="btn btn-sm btn-primary">Choose
+                                            </button>
+                                        </a>
                                     </div>
                                     <div className="card-footer">
                                         <small className="text-muted">Last updated 3 mins ago</small>
