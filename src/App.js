@@ -5,6 +5,7 @@ import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import WildLifeDestination from "./component/destinations_wildLife.component";
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
                     <Route path="/" exact component={HomeComponent}/>
                     <Route path="/airticket" component={AirTicketing}/>
                     <Route path="/destinations" component={TravelDestination}/>
+                    <Route path="/wildlife" component={WildLifeDestination}/>
                 </div>
             </Router>
 

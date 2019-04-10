@@ -5,6 +5,7 @@ import img1 from "../img/category_ancient cities.jpg";
 import img2 from "../img/category_hillCountry.jpg";
 import img3 from "../img/category_SeaSide.jpg";
 import img4 from "../img/category_wildLife.jpg";
+import {Link} from "react-router-dom";
 
 
 var sectionStyle = {
@@ -66,6 +67,7 @@ export default class AirTicketing extends Component {
                                     <div className="card-body">
                                         <h5 className="card-title">Explore Wild Life</h5>
                                         <button type="button" className="btn btn-sm  btn-primary">Choose
+                                            <Link to="/airticket" className="nav-link">Ticketing</Link>
                                         </button>
 
                                     </div>
