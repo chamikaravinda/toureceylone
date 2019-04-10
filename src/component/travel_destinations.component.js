@@ -26,13 +26,13 @@ var divOverlayStyle = {
 };
 
 
-export default class  TravelDestination extends Component {
+export default class TravelDestination extends Component {
     render() {
         return (
             <div style={sectionStyle}>
                 <div className="container-fluid" style={{width: 1000, height: 1000}}>
                     <div className="container">
-                        <h1 className="display-1 align-content-center">Places to visit</h1>
+                        <h1 className="display-1 align-content-center">Lets Book A Ticket</h1>
                     </div>
                 </div>
             </div>
