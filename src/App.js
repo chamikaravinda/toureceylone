@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
@@ -7,7 +8,6 @@ import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
 import SelectCountry from "./component/select_country.component"
 import logo from "./img/logoUn.png";
-
 
 class App extends Component {
     render() {
@@ -43,7 +43,6 @@ class App extends Component {
                                             <Link to="/selectcountry" className="nav-link">Select Country</Link>
                                         </li>
                                     </ul>
-
                                     <form className="form-inline my-2 my-lg-0">
                                         <input className="form-control mr-sm-2" type="search" placeholder="Search"
                                                aria-label="Search"/>
@@ -58,6 +57,7 @@ class App extends Component {
                     <Route path="/airticket" component={AirTicketing}/>
                     <Route path="/destinations" component={TravelDestination}/>
                     <Route path="/selectcountry" component={SelectCountry}/>
+
                 </div>
             </Router>
 
