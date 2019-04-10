@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
+import TravelDestination from "./component/travel_destinations.component.js"
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 
@@ -46,7 +47,7 @@ class App extends Component {
                     </div>
                     <Route path="/" exact component={HomeComponent}/>
                     <Route path="/airticket" component={AirTicketing}/>
-                    <Route path="/destinations" component={}/>
+                    <Route path="/destinations" component={TravelDestination}/>
                 </div>
             </Router>
 
