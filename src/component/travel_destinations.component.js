@@ -5,6 +5,10 @@ import img1 from "../img/category_ancient cities.jpg";
 import img2 from "../img/category_hillCountry.jpg";
 import img3 from "../img/category_SeaSide.jpg";
 import img4 from "../img/category_wildLife.jpg";
+import WildLifeDestination from './destinations_wildLife.component';
+import AirTicketing from "./air_ticketing.component";
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+
 
 var sectionStyle = {
     width: "100%",
@@ -33,6 +37,7 @@ export default class TravelDestination extends Component {
     render() {
         return (
             <div style={sectionStyle}>
+                <Router>
                 <div className="container-fluid" style={{width: 1000, height: 1000}}>
                     <div className="container">
                         <br/><br/>
@@ -71,8 +76,9 @@ export default class TravelDestination extends Component {
                                                  alt="Card image cap"/>
                                                 <div className="card-body">
                                                     <h5 className="card-title">Explore Wild Life</h5>
-                                                    <button type="button" className="btn btn-sm  btn-primary">Choose
-                                                    </button>
+
+                                                         <Link to="/wildlife"  className="btn btn-sm btn-primary">Destinations</Link>
+
 
                                                 </div>
                                                 <div className="card-footer">
@@ -96,7 +102,9 @@ export default class TravelDestination extends Component {
                                 </div>
                             </div>
                     </div>
+
                 </div>
+                </Router>
             </div>
         )
     }

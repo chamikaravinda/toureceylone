@@ -6,8 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
 import AirTicketing from "./component/air_ticketing.component.js"
 import TravelDestination from "./component/travel_destinations.component.js"
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import WildLifeDestination from "./component/destinations_wildLife.component";
 import SelectCountry from "./component/select_country.component"
 import logo from "./img/logoUn.png";
+
 
 class App extends Component {
     render() {
@@ -56,8 +59,8 @@ class App extends Component {
                     <Route path="/" exact component={HomeComponent}/>
                     <Route path="/airticket" component={AirTicketing}/>
                     <Route path="/destinations" component={TravelDestination}/>
+                    <Route path="/wildlife" component={WildLifeDestination}/>
                     <Route path="/selectcountry" component={SelectCountry}/>
-
                 </div>
             </Router>
 

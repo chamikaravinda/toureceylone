@@ -8,6 +8,7 @@ import img4 from "../img/flydubai.jpg";
 
 
 
+
 var sectionStyle = {
     width: "100%",
     height: "1000px",
@@ -75,6 +76,7 @@ export default class AirTicketing extends Component {
                                     <img className="card-img-top" src={img3}
                                          alt="Card image cap" style={imageStyle}/>
                                     <div className="card-body">
+
                                         <h5 className="card-title">Quantas</h5>
                                         <a href="https://www.qantas.com/us/en.html" target="_blank">
                                             <button type="button" className="btn btn-sm  btn-primary">Choose
