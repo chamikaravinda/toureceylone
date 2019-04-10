@@ -18,6 +18,37 @@ var sectionStyle = {
 
 };
 
+function calculateGalleFort() {
+    var result = "Galle Fort"
+    var priceValue = "10";
+
+    document.getElementById("destination").value = result;
+    //  document.getElementById("priceVal").value = "sddsds";
+}
+
+function calculateUnawatuna() {
+    var result = "Unawatuna Beach Hotel"
+    var price  = "9";
+
+    document.getElementById("destination").value = result;
+   // document.getElementById("price").value = price;
+}
+
+function calculateEarl() {
+    var result = "Earls Regency Kandy"
+    var price = "11";
+
+    document.getElementById("destination").value = result;
+   // document.getElementById("price").value = price;
+}
+
+function calculateMahaweli() {
+    var result = "Hotel Kandy"
+    var price = "8";
+
+    document.getElementById("destination").value = result;
+  //  document.getElementById("price").value = price;
+}
 
 export default class HotelList extends Component{
 
@@ -37,7 +68,7 @@ export default class HotelList extends Component{
                                          alt="Card image cap"/>
                                         <div className="card-body">
                                             <h5 className="card-title">Galle Fort Hotel</h5>
-                                            <button type="button" className="btn  btn-sm  btn-primary">Book Now</button>
+                                            <button onClick={calculateGalleFort} id = "fort"value = "FORT" type="button" className="btn  btn-sm  btn-primary">Book Now</button>
                                         </div>
                                         <div className="card-footer">
                                             <small className="text-muted">10$ Per Person</small>
@@ -47,7 +78,7 @@ export default class HotelList extends Component{
                                     <img className="card-img-top" src={hotel2_img} alt="Card image cap"/>
                                         <div className="card-body">
                                             <h5 className="card-title">Unawatuna Beach Hotel</h5>
-                                            <button type="button" className="btn btn-sm  btn-primary">Book Now</button>
+                                            <button type="button"  onClick={calculateUnawatuna} value = "UNAWATUNA" className="btn btn-sm  btn-primary">Book Now</button>
 
                                         </div>
                                         <div className="card-footer">
@@ -58,7 +89,7 @@ export default class HotelList extends Component{
                                     <img className="card-img-top" src={hotel3_img} alt="Card image cap"/>
                                         <div className="card-body">
                                             <h5 className="card-title">Earl's Regency Kandy</h5>
-                                            <button type="button" className="btn btn-sm  btn-primary">Book Now</button>
+                                            <button type="button" onClick={calculateEarl} value="EARL" className="btn btn-sm  btn-primary">Book Now</button>
 
                                         </div>
                                         <div className="card-footer">
@@ -70,7 +101,7 @@ export default class HotelList extends Component{
                                          alt="Card image cap"/>
                                         <div className="card-body">
                                             <h5 className="card-title">Mahaweli Reach Hotel Kandy</h5>
-                                            <button type="button" className="btn btn-sm btn-primary">Choose</button>
+                                            <button type="button" onClick={calculateMahaweli}  value="MAHAWELI" className="btn btn-sm btn-primary">Book Now</button>
 
                                         </div>
                                         <div className="card-footer">
@@ -80,7 +111,46 @@ export default class HotelList extends Component{
                             </div>
                         </div>
                     </div>
+
+                    <br/>
+                    <h2 color = "white"> Submit Form </h2>
+
+                    <form onSubmit={this.onSubmit}>
+                        <div className="form-group">
+                            <label color = "white">User ID : </label>
+                            <input type="text"
+                                   className="form-control"
+                                   value = "USER_34553"
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label color = "white">Destination : </label>
+                            <input type="text"
+                                   className="form-control"
+                                   value = ""
+                                   id = "destination"
+                            />
+                        </div>
+
+
+                        <div className="form-group">
+                            <label color = "white">Number of Days : </label>
+                            <input type="text"
+                                   className="form-control"
+                                   value = ""
+                                   ïd = "days"
+                            />
+                        </div>
+
+                        <div className= "form-group">
+                             <button type="button"  className="btn btn-sm  btn-primary"> Proceed</button>
+                        </div>
+
+                    </form>
                 </div>
+
+
             </div>
 
         )
