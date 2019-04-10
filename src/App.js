@@ -1,64 +1,54 @@
-import React, { Component } from 'react';
+
+import React, {Component} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Background from './img/image.jpg'
-
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HomeComponent from "./component/common_home.component.js"
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import HotelList from "./component/hotel-list-component";
-
-var sectionStyle = {
-    width: "100%",
-    height: "1000px",
-    backgroundImage: `url(${Background})`
-};
+import MapComponent from "./component/map-component";
 
 class App extends Component {
-  render() {
-    return (
+    render() {
+        return (
+            <Router>
+                <div>
+                    <div>
+                        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <div className="container">
+                                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul className="navbar-nav mr-auto">
+                                        <li className="nav-item active">
+                                            <a className="nav-link" href="#">Home<span
+                                                className="sr-only">(current)</span></a>
+                                        </li>
+                                        <li className="nav-item active">
+                                            <a className="nav-link" href="#">Ticketing<span
+                                                className="sr-only">(current)</span></a>
+                                        </li>
+                                        <li className="nav-item active">
+                                            <Link to = "/map" className = 'nav-link' > Map </Link>
+                                        </li>
+                                    </ul>
+                                    <form className="form-inline my-2 my-lg-0">
+                                        <input className="form-control mr-sm-2" type="search" placeholder="Search"
+                                               aria-label="Search"/>
+                                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
 
-        <section style={ sectionStyle }>
-        <Router>
-            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-                <div className="container">
-                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-                    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        Menu
-                        <i className="fas fa-bars"></i>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarResponsive">
-                        <ul className="navbar-nav text-uppercase ml-auto">
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#services">Services</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#about">About</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#team">Team</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                            </li>
-                            <li className='nav-item'>
-                                <Link to = "/listHotel" className = 'nav-link' > Hotels </Link>
-                            </li>
-                        </ul>
+
+                        </nav>
                     </div>
+                    <Route path = "/listHotel" component = {HotelList} />
+                    <Route path="/" exact component={HomeComponent}/>
+                    <Route path = "/map" component = {MapComponent}/>
                 </div>
-            </nav>
-            <Route path = '/listHotel' component = {HotelList} />
+            </Router>
 
-            <p>HIII</p>
-        </Router>
-        </section>
-
-    );
-  }
+        );
+    }
 }
 
 export default App;
