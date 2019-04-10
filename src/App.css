@@ -31,3 +31,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.hotelDiv{
+  background-color : white;
+  opacity : 0.5;
+}
