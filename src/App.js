@@ -2,51 +2,61 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Background from './img/image.jpg'
-import logo from './img/logomain.png'
 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HotelList from "./component/hotel-list-component";
 
 var sectionStyle = {
     width: "100%",
-    height: "100%",
-    backgroundImage: `url(${Background})`,
-    backgroundRepeat: "none"
+    height: "1000px",
+    backgroundImage: `url(${Background})`
 };
 
 class App extends Component {
   render() {
     return (
-        <div style={ sectionStyle } className="jumbotron">
-            <div className="container">
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="google.com" target="_blank">
-                    <img src={logo} width="100%" height="100%" alt="google.com"/>
-                </a>
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Ticketing<span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#">Lodging<span className="sr-only">(current)</span></a>
-                        </li>
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#"><span className="sr-only">(current)</span></a>
-                        </li>
-
-
-                    </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+        <section style={ sectionStyle }>
+        <Router>
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+                <div className="container">
+                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        Menu
+                        <i className="fas fa-bars"></i>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarResponsive">
+                        <ul className="navbar-nav text-uppercase ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#services">Services</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#about">About</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#team">Team</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to = "/listHotel" className = 'nav-link' > Hotels </Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
-            </div>
-        </div>
+            <Route path = '/listHotel' component = {HotelList} />
+
+            <p>HIII</p>
+        </Router>
+        </section>
+
     );
   }
 }
