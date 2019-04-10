@@ -13,13 +13,22 @@ var sectionStyle = {
 };
 
 
+var divOverlayStyle = {
+    zindex: "10",
+    backgroundColor: "rgba(0,0,0,0.5)"
+};
+
+
 export default class  HomeComponent extends Component {
     render() {
         return (
             <div style={sectionStyle}>
                 <div className="container-fluid" style={{width: 1000, height: 1000}}>
                     <div className="container">
-                        <h1 className="display-1 align-content-center">Welcome To the Miracale of Asia</h1>
+                        <br/><br/><br/>
+                        <div className="col-md-10 offset-md-1" style={divOverlayStyle}>
+                            <h1 className="display-1 align-content-center" style={{color:"white"}}><b>Welcome To the Miracle of Asia </b></h1>
+                        </div>
                     </div>
                 </div>
             </div>

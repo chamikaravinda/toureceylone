@@ -1,11 +1,13 @@
 
 import React, {Component} from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeComponent from "./component/common_home.component.js"
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import HotelList from "./component/hotel-list-component";
-import MapComponent from "./component/map-component";
+import AirTicketing from "./component/air_ticketing.component.js"
+import TravelDestination from "./component/travel_destinations.component.js"
+import SelectCountry from "./component/select_country.component"
+import logo from "./img/logoUn.png";
 
 class App extends Component {
     render() {
@@ -14,19 +16,31 @@ class App extends Component {
                 <div>
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <a className="navbar-brand" href="google.com" target="_blank">
+                                <img src={logo} width="82" height="64" alt="google.com"/>
+                            </a>
                             <div className="container">
                                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul className="navbar-nav mr-auto">
                                         <li className="nav-item active">
-                                            <a className="nav-link" href="#">Home<span
+                                            <Link to="/" className="nav-link">Home</Link>
+                                        </li>
+
+                                        <li className="nav-item active">
+                                            <a className="nav-link" href="#">Hotel<span
                                                 className="sr-only">(current)</span></a>
                                         </li>
+
                                         <li className="nav-item active">
-                                            <a className="nav-link" href="#">Ticketing<span
-                                                className="sr-only">(current)</span></a>
+                                            <Link to="/airticket" className="nav-link">Ticketing</Link>
                                         </li>
+
                                         <li className="nav-item active">
-                                            <Link to = "/map" className = 'nav-link' > Map </Link>
+                                            <Link to="/destinations" className="nav-link">Destinations</Link>
+                                        </li>
+
+                                        <li className="nav-item active">
+                                            <Link to="/selectcountry" className="nav-link">Select Country</Link>
                                         </li>
                                     </ul>
                                     <form className="form-inline my-2 my-lg-0">
@@ -37,13 +51,13 @@ class App extends Component {
                                     </form>
                                 </div>
                             </div>
-
-
                         </nav>
                     </div>
-                    <Route path = "/listHotel" component = {HotelList} />
                     <Route path="/" exact component={HomeComponent}/>
-                    <Route path = "/map" component = {MapComponent}/>
+                    <Route path="/airticket" component={AirTicketing}/>
+                    <Route path="/destinations" component={TravelDestination}/>
+                    <Route path="/selectcountry" component={SelectCountry}/>
+
                 </div>
             </Router>
 
